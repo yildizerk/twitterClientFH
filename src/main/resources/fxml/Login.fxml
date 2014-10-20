@@ -22,7 +22,7 @@
          <children>
             <TextField fx:id="name" prefHeight="25.0" prefWidth="124.0" GridPane.columnIndex="1" />
             <PasswordField fx:id="password" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <Button fx:id="loginButton" mnemonicParsing="false" text="Login" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Button fx:id="loginButton" disable="true" mnemonicParsing="false" text="Login" GridPane.columnIndex="1" GridPane.rowIndex="2" />
             <Label text="Name:" />
             <Label text="Password:" GridPane.rowIndex="1" />
          </children>
