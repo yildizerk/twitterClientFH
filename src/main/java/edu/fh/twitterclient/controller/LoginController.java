@@ -2,6 +2,8 @@ package edu.fh.twitterclient.controller;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.fxml.FXML;
@@ -29,6 +31,21 @@ public class LoginController implements Initializable {
     @Override
     public void initialize(final URL url, final ResourceBundle rb) {
         loginButton.setOnAction(this::handleLoginButtonAction);
+    
+        /* Noch fehlerhaft
+        ChangeListener<String> textListener = new ChangeListener<String>() {
+ 
+            @Override
+            public void changed(ObservableValue<? extends String> ov, String oldValue, String newValue) {
+                if(newValue.equals(""))
+                    loginButton.setDisable(true);
+                else
+                    loginButton.setDisable(false);
+            }
+        };
+        name.textProperty().addListener(textListener);
+        password.textProperty().addListener(textListener);
+        */
     }    
     
     protected void handleLoginButtonAction(ActionEvent e) {
