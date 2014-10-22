@@ -32,20 +32,19 @@ public class LoginController implements Initializable {
     public void initialize(final URL url, final ResourceBundle rb) {
         loginButton.setOnAction(this::handleLoginButtonAction);
     
-        /* Noch fehlerhaft
         ChangeListener<String> textListener = new ChangeListener<String>() {
  
             @Override
             public void changed(ObservableValue<? extends String> ov, String oldValue, String newValue) {
                 if(newValue.equals(""))
-                    loginButton.setDisable(true);
-                else
+                    loginButton.setDisable(true); 
+                
+                else if(!name.getText().isEmpty() && !password.getText().isEmpty())
                     loginButton.setDisable(false);
             }
         };
         name.textProperty().addListener(textListener);
-        password.textProperty().addListener(textListener);
-        */
+        password.textProperty().addListener(textListener);     
     }    
     
     protected void handleLoginButtonAction(ActionEvent e) {

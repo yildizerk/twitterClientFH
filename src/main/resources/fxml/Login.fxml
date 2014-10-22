@@ -7,7 +7,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="430.0" prefWidth="555.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" styleClass="background" prefHeight="430.0" prefWidth="555.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <AnchorPane prefHeight="430.0" prefWidth="555.0">
          <children>
@@ -25,10 +25,13 @@
                   <TextField fx:id="name" prefHeight="25.0" prefWidth="124.0" GridPane.columnIndex="1" />
                   <PasswordField fx:id="password" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                   <Button fx:id="loginButton" disable="true" mnemonicParsing="false" text="Login" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                  <Label text="Name:" />
-                  <Label text="Password:" GridPane.rowIndex="1" />
+                  <Label styleClass="labelLogin" text="Name:" />
+                  <Label styleClass="labelLogin" text="Password:" GridPane.rowIndex="1" />
                </children>
             </GridPane>
          </children></AnchorPane>
    </children>
+       <stylesheets>
+        <URL value="@/styles/Stylesheet.css"/>
+    </stylesheets>
 </AnchorPane>

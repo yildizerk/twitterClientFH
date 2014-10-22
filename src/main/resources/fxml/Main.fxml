@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="430.0" prefWidth="555.0" styleClass="background" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+    <stylesheets>
+        <URL value="@/styles/Stylesheet.css" />
+    </stylesheets>
+   <children>
+      <AnchorPane prefHeight="430.0" prefWidth="555.0">
+         <children>
+            <Button layoutX="252.0" layoutY="203.0" mnemonicParsing="false" text="Logout" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

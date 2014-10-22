@@ -1,12 +1,14 @@
 package edu.fh.twitterclient;
 
 import edu.fh.twitterclient.controller.LoginController;
+import javafx.scene.image.Image;
 import java.net.URL;
 import javafx.application.Application;
 import static javafx.application.Application.launch;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.MenuBar;
 import javafx.stage.Stage;
 
 /**
@@ -25,11 +27,14 @@ public class MainApp extends Application {
         final FXMLLoader fxmlLoader = new FXMLLoader(fxmlLocation);
         fxmlLoader.setController(new LoginController());
         final Parent root = fxmlLoader.load();
-        
-        Scene scene = new Scene(root);
-        scene.getStylesheets().add("/styles/Login.css");
+        final Image appImage = new Image("/pics/twitter.png");
+
+        Scene scene = new Scene(root, 545, 430);
+        //scene.getStylesheets().add("/styles/Login.css");
         
         stage.setTitle("Twitter Client based on JavaFX");
+        stage.getIcons().add(appImage);
+        stage.setResizable(false);
         stage.setScene(scene);
         stage.show();
     }
