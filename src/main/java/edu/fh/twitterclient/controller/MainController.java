@@ -1,15 +1,8 @@
 package edu.fh.twitterclient.controller;
 
-import java.net.URL;
-import java.util.ResourceBundle;
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
-import javafx.event.ActionEvent;
-import javafx.fxml.Initializable;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
+import javafx.scene.Node;
+import javafx.scene.layout.AnchorPane;
 
 /**
  * MainController class
@@ -19,11 +12,13 @@ import javafx.scene.control.TextField;
  * @version 1.0
  * 
  */
-public class MainController implements Initializable {
+public class MainController {
             
-    @Override
-    public void initialize(final URL url, final ResourceBundle rb) {
-        
+    @FXML
+    private AnchorPane layout;
+    
+    public void setLayout(Node node) {
+        layout.getChildren().setAll(node);
     }
 
 }
