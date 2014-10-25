@@ -31,7 +31,7 @@
             </GridPane>
          </children></AnchorPane>
    </children>
-       <stylesheets>
+    <stylesheets>
         <URL value="@/styles/Stylesheet.css"/>
     </stylesheets>
 </AnchorPane>

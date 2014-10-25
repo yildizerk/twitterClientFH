@@ -19,7 +19,7 @@ import javafx.scene.control.TextField;
  * @version 1.0
  * 
  */
-public class LoginController implements Initializable {
+public class ChildLoginController implements Initializable {
 
     @FXML
     private Button loginButton;

@@ -1,15 +1,13 @@
 package edu.fh.twitterclient.controller;
 
+import edu.fh.twitterclient.controller.MainController;
+import edu.fh.twitterclient.controller.MainController;
+import java.io.IOException;
+import java.io.InputStream;
 import java.net.URL;
-import java.util.ResourceBundle;
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
-import javafx.event.ActionEvent;
-import javafx.fxml.Initializable;
-import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+
 
 /**
  * LayoutManager class
@@ -19,11 +17,23 @@ import javafx.scene.control.TextField;
  * @version 1.0
  * 
  */
-public class LayoutManager implements Initializable {
+public class LayoutManager {
             
-    @Override
-    public void initialize(final URL url, final ResourceBundle rb) {
-        
-    }
+    public static final String MAIN = "/fxml/Main.fxml";
+    public static final String CHILDLOGIN = "/fxml/ChildLogin.fxml";
+    private static MainController mainController;
 
+    public static void setMainController(MainController mainController) {
+        LayoutManager.mainController = mainController;
+    }
+    
+    public static void loadLayout(String fxml) throws IOException{
+        /*try {
+            mainController.setLayout((Node) FXMLLoader.load(LayoutManager.class.getResource(fxml)));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }*/
+        System.out.println("LayoutManager String fxml: " + fxml);
+                mainController.setLayout((Node) FXMLLoader.load(LayoutManager.class.getResource(fxml)));
+    }
 }
