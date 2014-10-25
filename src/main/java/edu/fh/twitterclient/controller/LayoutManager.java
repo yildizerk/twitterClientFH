@@ -1,10 +1,6 @@
 package edu.fh.twitterclient.controller;
 
-import edu.fh.twitterclient.controller.MainController;
-import edu.fh.twitterclient.controller.MainController;
 import java.io.IOException;
-import java.io.InputStream;
-import java.net.URL;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 
@@ -27,13 +23,11 @@ public class LayoutManager {
         LayoutManager.mainController = mainController;
     }
     
-    public static void loadLayout(String fxml) throws IOException{
-        /*try {
+    public static void loadLayout(String fxml) {
+        try {
             mainController.setLayout((Node) FXMLLoader.load(LayoutManager.class.getResource(fxml)));
         } catch (IOException e) {
             e.printStackTrace();
-        }*/
-        System.out.println("LayoutManager String fxml: " + fxml);
-                mainController.setLayout((Node) FXMLLoader.load(LayoutManager.class.getResource(fxml)));
+        }
     }
 }

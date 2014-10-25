@@ -8,7 +8,6 @@ import java.net.URL;
 import javafx.application.Application;
 import static javafx.application.Application.launch;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
@@ -25,23 +24,8 @@ public class MainApp extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        
-        
-        //final URL fxmlLocation = getClass().getResource("/fxml/ChildLogin.fxml");
-        //final FXMLLoader fxmlLoader = new FXMLLoader(fxmlLocation);
-        //fxmlLoader.setController(new ChildLoginController());
-        //final Parent root = fxmlLoader.load();
         final Image appImage = new Image("/pics/twitter.png");
-                             
         
-        /*Scene scene = new Scene(root, 545, 430); 
-        stage.setTitle("Twitter Client based on JavaFX");
-        stage.getIcons().add(appImage);
-        stage.setResizable(false);
-        stage.setScene(scene); 
-        stage.show();*/
-        
-
         stage.setTitle("Twitter Client based on JavaFX");
         stage.getIcons().add(appImage);
         stage.setResizable(false);
@@ -55,14 +39,10 @@ public class MainApp extends Application {
         
         Pane mainPane = loader.load(); 
  
-        System.out.println("fxmlLocation MainApp: " + fxmlLocation);
-        System.out.println("loadMainPane erreicht -> " + LayoutManager.MAIN);
         MainController mainController = loader.getController(); 
  
         LayoutManager.setMainController(mainController);
-        System.out.println("ChildLogin erreicht");
         LayoutManager.loadLayout(LayoutManager.CHILDLOGIN);
-        System.out.println("ChildLogin2 erreicht");
         return mainPane;
     }
        

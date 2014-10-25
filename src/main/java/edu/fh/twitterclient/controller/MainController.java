@@ -26,7 +26,6 @@ public class MainController implements Initializable {
     }
     
     public void setLayout(Node node) {
-        System.out.println("MainController Node node: " + node);
         layoutMain.getChildren().setAll(node);
     }
 
