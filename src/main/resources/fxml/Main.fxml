@@ -33,6 +33,6 @@
             </ImageView>
          </items>
       </ToolBar>
-      <StackPane prefHeight="372.0" prefWidth="600.0" />
+      <StackPane fx:id="layoutMain" prefHeight="372.0" prefWidth="600.0" />
    </children>
 </VBox>
