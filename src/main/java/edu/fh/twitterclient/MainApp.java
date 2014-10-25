@@ -10,7 +10,7 @@ import static javafx.application.Application.launch;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 /**
@@ -19,11 +19,6 @@ import javafx.stage.Stage;
  * 
  * @author lennart-WOB
  * @version 1.0-alpha
- * 
- * Diverse Anpassungen noch ausstehend:
- * Es muessen noch Methoden fuer das Laden der AnchorPane
- * und dem Erstellen der Scene bereitgestellt werden!
- * Sollte Freitag im Laufe des Tages erledigt sein.
  * 
  */
 public class MainApp extends Application {
@@ -50,29 +45,29 @@ public class MainApp extends Application {
         stage.setTitle("Twitter Client based on JavaFX");
         stage.getIcons().add(appImage);
         stage.setResizable(false);
-        stage.setScene(createScene(loadMainAnchorPane()));
+        stage.setScene(createScene(loadMainPane()));
         stage.show();
     }
    
-    private AnchorPane loadMainAnchorPane() throws IOException {
+    private Pane loadMainPane() throws IOException {
         URL fxmlLocation = getClass().getResource(LayoutManager.MAIN);
         FXMLLoader loader = new FXMLLoader(fxmlLocation);
         
-        AnchorPane mainAnchorPane = loader.load(); 
+        Pane mainPane = loader.load(); 
  
         System.out.println("fxmlLocation MainApp: " + fxmlLocation);
-        System.out.println("loadMainAnchor erreicht -> " + LayoutManager.MAIN);
+        System.out.println("loadMainPane erreicht -> " + LayoutManager.MAIN);
         MainController mainController = loader.getController(); 
  
         LayoutManager.setMainController(mainController);
         System.out.println("ChildLogin erreicht");
         LayoutManager.loadLayout(LayoutManager.CHILDLOGIN);
         System.out.println("ChildLogin2 erreicht");
-        return mainAnchorPane;
+        return mainPane;
     }
        
-    private Scene createScene(AnchorPane mainAnchorPane) {
-        Scene scene = new Scene(mainAnchorPane, 545, 430);
+    private Scene createScene(Pane mainPane) {
+        Scene scene = new Scene(mainPane, 545, 430);
         
         return scene;
     }
