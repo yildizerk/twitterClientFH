@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
 <?import javafx.scene.image.*?>
 <?import java.lang.*?>
 <?import java.net.*?>
@@ -8,31 +9,24 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" styleClass="background" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.fh.twitterclient.controller.MainController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="background" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.fh.twitterclient.controller.MainController">
     <stylesheets>
-        <URL value="@/styles/Stylesheet.css"/>
+        <URL value="@/styles/Stylesheet.css" />
     </stylesheets>   
     <children>
-      <ToolBar prefHeight="19.0" prefWidth="555.0" styleClass="menuToolbar">
-         <items>
-            <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../pics/user.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../pics/comment.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../pics/logout.png" />
-               </image>
-            </ImageView>
-         </items>
-      </ToolBar>
+      <HBox prefHeight="37.0" prefWidth="600.0" spacing="20.0" styleClass="background">
+         <padding>
+            <Insets left="7.0" right="7.0" top="7.0" />
+         </padding>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+         <children>
+            <Button fx:id="menuButtonUser" mnemonicParsing="false" text=" User" />
+            <Button fx:id="menuButtonTwitter" mnemonicParsing="false" text=" Twitter" />
+            <Button fx:id="menuButtonLogout" mnemonicParsing="false" text=" Logout" />
+         </children>
+      </HBox>
       <StackPane fx:id="layoutMain" prefHeight="372.0" prefWidth="600.0" />
    </children>
 </VBox>
